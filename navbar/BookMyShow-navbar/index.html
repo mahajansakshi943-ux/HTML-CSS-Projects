@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow Navbar</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<header class="top-navbar">
+
+    <div class="left-section">
+        <div class="bms-logo">
+            book<span>my</span>show
+        </div>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text"
+            placeholder="Search for Movies, Events, Plays, Sports and Activities">
+        </div>
+    </div>
+
+    <div class="right-section">
+
+        <button class="location">
+            Pune <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <button class="sign-in">Sign in</button>
+
+        <button class="menu" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<nav class="category-navbar">
+
+    <div class="category-left">
+
+        <input type="radio" name="category" id="movies" checked>
+        <label for="movies" class="nav-item">Movies</label>
+
+        <input type="radio" name="category" id="stream">
+        <label for="stream" class="nav-item">Stream</label>
+
+        <input type="radio" name="category" id="events">
+        <label for="events" class="nav-item">Events</label>
+
+        <input type="radio" name="category" id="plays">
+        <label for="plays" class="nav-item">Plays</label>
+
+        <input type="radio" name="category" id="sports">
+        <label for="sports" class="nav-item">Sports</label>
+
+        <input type="radio" name="category" id="activities">
+        <label for="activities" class="nav-item">Activities</label>
+
+    </div>
+
+    <div class="category-right">
+
+        <input type="radio" name="category" id="list">
+        <label for="list" class="nav-item">ListYourShow</label>
+
+        <input type="radio" name="category" id="corporates">
+        <label for="corporates" class="nav-item">Corporates</label>
+
+        <input type="radio" name="category" id="offers">
+        <label for="offers" class="nav-item">Offers</label>
+
+        <input type="radio" name="category" id="giftcards">
+        <label for="giftcards" class="nav-item">Gift Cards</label>
+
+    </div>
+
+</nav>
+
+</body>
+</html>

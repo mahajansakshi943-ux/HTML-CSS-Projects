@@ -1,0 +1,258 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+.linkedin-navbar {
+    width: 100%;
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 8px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #ffffff;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.linkedin-logo {
+    width: 42px;
+    height: 42px;
+    background: #0a66c2;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search-box {
+    height: 42px;
+    width: 340px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px;
+    border: 1px solid #b9b9b9;
+    border-radius: 25px;
+    background: #f4f4f4;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.search-box:focus-within {
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #333333;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-item {
+    position: relative;
+    min-width: 82px;
+    height: 66px;
+    padding: 5px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #666666;
+    text-decoration: none;
+    font-size: 12px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, background 0.2s;
+}
+
+.nav-item > i {
+    font-size: 23px;
+}
+
+.nav-item:hover {
+    color: #191919;
+    background: #f3f3f3;
+    border-radius: 5px;
+}
+
+.nav-item.active {
+    color: #191919;
+    border-bottom-color: #191919;
+}
+
+.icon-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-badge > i {
+    font-size: 23px;
+}
+
+.badge {
+    position: absolute;
+    top: -9px;
+    right: -12px;
+    min-width: 19px;
+    height: 19px;
+    padding: 2px 5px;
+    background: #cc1016;
+    color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.profile-circle {
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dedede;
+    color: #555555;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+.arrow {
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+.business {
+    border-left: 1px solid #eeeeee;
+    min-width: 115px;
+}
+
+.business > i {
+    font-size: 22px;
+}
+
+.premium {
+    min-width: 145px;
+}
+
+.premium > i {
+    color: #c58b16;
+    font-size: 22px;
+}
+
+@media (max-width: 1100px) {
+    .linkedin-navbar {
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .search-box {
+        width: 200px;
+    }
+
+    .nav-links {
+        gap: 0;
+    }
+
+    .nav-item {
+        min-width: 65px;
+        padding: 5px;
+    }
+
+    .premium {
+        min-width: 100px;
+    }
+}
+
+.nav-links input[type="radio"] {
+    display: none;
+}
+
+.nav-links .nav-item {
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+/* Selected item underline */
+.nav-links input[type="radio"]:checked + .nav-item {
+    color: #191919;
+    border-bottom-color: #191919;
+}
+
+/* Hover effect */
+.nav-links .nav-item:hover {
+    background-color: #f3f3f3;
+    color: #191919;
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links input[type="radio"] {
+    display: none;
+}
+
+.nav-links .nav-item {
+    position: relative;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Selected item */
+.nav-links input[type="radio"]:checked + .nav-item {
+    color: #191919;
+    border-bottom-color: #191919;
+}
+
+/* Hover */
+.nav-links .nav-item:hover {
+    color: #191919;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+/* Notification badge */
+.nav-links .badge {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(5px);
+    background: #cc1016;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 5px;
+    font-size: 10px;
+}
