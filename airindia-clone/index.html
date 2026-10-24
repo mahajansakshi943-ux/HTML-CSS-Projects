@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air India — Homepage Clone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-top">
+    <a class="logo" href="#">AIR INDIA<span> ◢</span></a>
+    <div class="utility"><a href="#deals">▤ TARIFF</a><a href="#destinations">DISCOVER AI</a><a href="#support">♧ SUPPORT</a><a href="#search">⌕ SEARCH</a><a href="#">◎ IN⌄</a><a class="pill" href="#signup">SIGN UP</a><a class="pill signin" href="#signin">SIGN IN</a></div>
+  </div>
+  <nav class="header-bottom main-nav">
+    <a href="#search">BOOK &amp; MANAGE</a><a href="#destinations">WHERE WE FLY</a><a href="#plan">PREPARE TO TRAVEL</a><a href="#experience">AIR INDIA EXPERIENCE</a><a href="#club">MAHARAJA CLUB</a>
+  </nav>
+</header>
+<main>
+  <section class="booking" id="search">
+    <div class="booking-tabs"><a href="#search">SEARCH FLIGHTS</a><a href="#manage">MANAGE BOOKING</a><a href="#checkin">CHECK-IN</a><a href="#status">FLIGHT STATUS</a><a href="#signup">eZ Booking</a><span class="student-offer">Flat 10% off for Students</span></div>
+    <div class="trip-type"><label><input type="radio" name="trip" checked> Round Trip</label><label><input type="radio" name="trip"> One Way</label><label><input type="radio" name="trip"> Multi City</label></div>
+    <form>
+      <div class="booking-grid">
+        <div class="field city-field"><label>FROM</label><strong>FROM ↔</strong><input aria-label="Origin" placeholder="Origin"></div>
+        <div class="field city-field"><label>TO</label><strong>TO</strong><input aria-label="Destination" placeholder="Destination"></div>
+        <div class="field"><label>Depart Date</label><input type="date" aria-label="Depart date"></div>
+        <div class="field"><label>Return Date</label><input type="date" aria-label="Return date"></div>
+        <div class="field"><label>Passenger(s)</label><select aria-label="Passengers"><option>1 Adult</option><option>2 Adults</option><option>3 Adults</option><option>4 Adults</option><option>Family</option></select></div>
+        <div class="field"><label>Class</label><select aria-label="Cabin class"><option>Economy</option><option>Premium Economy</option><option>Business</option><option>First</option></select></div>
+        <button class="search-btn" type="button" onclick="document.getElementById('demo-note').style.display='block'">Search</button>
+      </div>
+      <div id="demo-note" style="display:none;color:#b50935;margin-top:15px">Demo interface only — connect a flight-search API to retrieve real flights and fares.</div>
+    </form>
+    <div class="member-note">✧ Logged-in users enjoy up to 15% off on fares</div>
+  </section>
+
+  <section class="section" id="deals">
+    <div class="section-heading"><div><h2>EXCLUSIVE DEALS</h2><p class="lead">Uncover a range of deals and discounts, curated to ensure you get unbeatable value every time you fly with us.</p></div><a class="outline-btn" href="#deals">View All　24</a></div>
+    <div class="deal-grid"><div class="deal"><span>BANK<br>OFFERS</span><span class="symbol">₹</span></div><div class="deal"><span>DISCOUNT<br>CODES</span><span class="symbol">％</span></div><div class="deal"><span>LIMITED TIME<br>DEALS</span><span class="symbol">◷</span></div><div class="deal"><span>SPECIAL<br>FARES</span><span class="symbol">✈</span></div></div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-copy"><div class="eyebrow">AIR INDIA · MAHARAJA CLUB</div><h1>ENROL WITH<br>MAHARAJA CLUB</h1><p>and experience #ThatSpecialFeeling</p><a class="red-btn" href="#club">Know More</a></div>
+  </section>
+
+  <section class="section" id="destinations">
+    <div class="section-heading"><div><h2>BOOK NONSTOP DIRECT FLIGHTS</h2><p class="lead">Spend less time travelling and more time at your destination. Our nonstop network connects India to destinations across Asia, Australia, Europe, the Middle East, North America, and more.</p></div><a class="outline-btn" href="#destinations">View All</a></div>
+    <div class="destination-grid">
+      <a class="destination melbourne" href="#search"><div><h3>MELBOURNE</h3><p>Melbourne Airport (MEL)</p></div></a>
+      <a class="destination bangalore" href="#search"><div><h3>BANGALORE</h3><p>Kempegowda International Airport (BLR)</p></div></a>
+      <a class="destination toronto" href="#search"><div><h3>TORONTO</h3><p>Toronto Pearson International Airport (YYZ)</p></div></a>
+      <a class="destination newyork" href="#search"><div><h3>NEW YORK</h3><p>John F. Kennedy International Airport (JFK)</p></div></a>
+    </div>
+  </section>
+
+  <section class="section" id="plan"><h2>PLAN YOUR TRIP</h2><p class="lead">Ready, set, travel! You focus on the journey; we'll take care of the logistics.</p>
+    <div class="plan-grid">
+      <article class="plan-card"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Airplane travel"><div class="plan-copy"><h3>BAGGAGE ESSENTIALS</h3><p>Travel light or with more baggage than you can imagine. Baggage rules decoded.</p></div></article>
+      <article class="plan-card"><img src="https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&w=800&q=80" alt="Airport terminal"><div class="plan-copy"><h3>STAR ALLIANCE</h3><p>The world, effortlessly connected to destinations around the globe.</p></div></article>
+      <article class="plan-card"><img src="https://images.unsplash.com/photo-1551836042-04c7c7f7f8d2?auto=format&fit=crop&w=800&q=80" alt="Customer support"><div class="plan-copy"><h3>CONTACT US</h3><p>Have a question about your journey? We're here to help.</p></div></article>
+    </div>
+  </section>
+
+  <section class="section club" id="club">
+    <div><div class="logo" style="color:#a87928">✿ MAHARAJA CLUB</div><h2 style="margin-top:28px">YOUR MEMBER BENEFITS</h2><p class="lead">Join Maharaja Club, Air India’s frequent flyer programme and unlock a world of rewards. Enjoy bonus points on your first flight after enrolment.</p>
+      <div class="benefits">
+        <article class="benefit"><h3>✦ ACCELERATED EARNINGS</h3><p>Earn Maharaja Points on flights and spends across our expanding network of partners.</p></article>
+        <article class="benefit"><h3>▣ EFFORTLESS REDEMPTIONS</h3><p>Redeem points for award flights and cabin upgrades on eligible airlines.</p></article>
+        <article class="benefit"><h3>♧ TIER BENEFITS</h3><p>Unlock benefits such as lounge access, priority services and extra baggage allowance.</p></article>
+        <article class="benefit"><h3>₹ MEMBER-ONLY FARES</h3><p>Access exclusive fares and offers when you log in and book directly.</p></article>
+      </div><a class="red-btn" href="#signup">Join Now</a>
+    </div>
+    <div class="club-art">NOW EARN AND REDEEM POINTS ON YOUR JOURNEY</div>
+  </section>
+
+  <section class="section" id="experience"><div class="feature-grid">
+    <div class="feature-stack"><article class="feature-tile"><img src="https://images.unsplash.com/photo-1540339832862-474599807836?auto=format&fit=crop&w=600&q=80" alt="Premium cabin"><span>PREMIUM ECONOMY</span></article><article class="feature-tile"><img src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=600&q=80" alt="Airplane in flight"><span>GLOBAL TRAVEL · A350</span></article></div>
+    <article class="feature-tile feature-main"><img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1000&q=85" alt="Airline cabin experience"><span>EXPERIENCE OUR ALL-NEW FLEET<br><br>NEW FEELS GOOD</span></article>
+    <div class="feature-stack"><article class="feature-tile"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Travel smart"><span>TRAVEL SMARTER</span></article><article class="feature-tile"><img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&q=80" alt="Mobile app"><span>AIR INDIA E-STORE</span></article></div>
+  </div></section>
+
+  <section class="section digital-grid">
+    <article class="info-card"><h3>♧ SMART BAGGAGE TRACKING</h3><p>Get baggage updates and manage your journey from the Air India app.</p></article>
+    <article class="digital-main"><div class="logo">AIR INDIA</div><h2>YOUR DIGITAL<br>TRAVEL BUDDY</h2><p>Book, manage and stay updated on your journey with the Air India app.</p></article>
+    <div class="feature-stack"><article class="info-card"><h3>AEYE VISION</h3><p>Scan a QR code or barcode to track bags and stay updated on flight status.</p></article><article class="info-card"><h3>USE APPFIRST FOR 5% OFF</h3><p>Book and manage your flights on the mobile app.</p></article></div>
+  </section>
+
+  <section class="section"><h2 style="text-align:center">AWARDS</h2><div class="awards"><article class="award"><div class="stars">★ ★ ★</div><p>Maharaja Club<br>Programme of the Year</p><strong>Freddie Award 2026</strong></article><article class="award"><div class="stars">★ ★ ★</div><p>Four Star Airline Rating</p><strong>Skytrax</strong></article><article class="award"><div class="stars">★ ★ ★</div><p>Four Star Global Airline 2025</p><strong>Apex Award</strong></article><article class="award"><div class="stars">★ ★ ★</div><p>Experience Maker of the Year 2025</p><strong>Adobe Award</strong></article></div></section>
+</main>
+<footer id="support">
+  <div class="footer-grid">
+    <div><h4>ABOUT US</h4><a href="#">About Air India</a><a href="#">Newsroom</a><a href="#">Corporate Information</a><a href="#">Safety</a><a href="#">Careers</a></div>
+    <div><h4>BOOK &amp; MANAGE</h4><a href="#search">Search Flights</a><a href="#manage">Manage Booking</a><a href="#">Flight Schedule</a><a href="#">Cargo</a></div>
+    <div><h4>WHERE WE FLY</h4><a href="#destinations">Route Map</a><a href="#destinations">Non-stop Flights</a><a href="#">Alliances and Partnerships</a><a href="#">Popular Flights</a></div>
+    <div><h4>PREPARE TO TRAVEL</h4><a href="#plan">Baggage Guidelines</a><a href="#plan">Airport Information</a><a href="#">Visas, Documents and Travel Tips</a><a href="#">Travelling with Pets</a></div>
+    <div><h4>AIR INDIA EXPERIENCE</h4><a href="#experience">At The Airport</a><a href="#experience">In The Air</a><a href="#experience">Our Fleet</a></div>
+    <div><h4>MAHARAJA CLUB</h4><a href="#club">About Maharaja Club</a><a href="#club">Points Calculator</a><a href="#club">Earn Points</a><a href="#club">Redeem Points</a></div>
+    <div><h4>SUPPORT</h4><a href="#">Contact</a><a href="#">Frequently Asked Questions</a><a href="#">Grievance Resolution</a><a href="#">Passenger Rights</a></div>
+    <div><h4>FOLLOW US ON</h4><a href="#">LinkedIn　 YouTube　 Instagram　 X</a><p>Air India App · Book and manage your flights on the go.</p></div>
+  </div>
+  <div class="footer-bottom">The content on this demonstration page is for educational and portfolio use. This is an unofficial front-end clone and is not affiliated with Air India. Real bookings, payments, flight status and account features are not connected.<br><br>© 2026 Air India-style homepage recreation · HTML &amp; CSS layout with a tiny inline demo interaction.</div>
+</footer>
+</body>
+</html>
