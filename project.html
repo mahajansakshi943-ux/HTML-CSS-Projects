@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | My Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 22px 7%;
+            border-bottom: 1px solid #333;
+        }
+
+        header a {
+            color: #ffa500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 55px auto;
+            padding: 0 24px;
+        }
+
+        .eyebrow {
+            color: #ffa500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: clamp(30px, 5vw, 46px);
+            line-height: 1.2;
+            margin: 12px 0;
+        }
+
+        .summary {
+            font-size: 18px;
+            color: #ccc;
+        }
+
+        .details-card {
+            background: #202020;
+            border-left: 4px solid #ffa500;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #ffb6c1;
+            margin-top: 0;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-list span {
+            padding: 7px 12px;
+            background: #333;
+            border: 1px solid #555;
+            border-radius: 5px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background: #ffa500;
+            color: #111;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                margin-top: 35px;
+            }
+
+            .details-card {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html#projects">← Back to Projects</a>
+    </header>
+
+    <main id="project-content">
+        <p>Loading project details...</p>
+    </main>
+
+    <script>
+        const projects = {
+            "iot-smart-switch": {
+                title: "IoT-Based Smart Switch",
+                category: "Internet of Things",
+                summary:
+                    "A smart switching project focused on controlling electrical appliances using IoT technology.",
+                overview:
+                    "The project explores how connected hardware can make appliance switching more convenient. It combines an electronic switching system with a control interface to demonstrate IoT-based automation.",
+                problem:
+                    "Traditional switches require users to operate appliances at the physical switch. An IoT-based approach can provide an alternative method of controlling connected appliances.",
+                solution:
+                    "The system is designed to connect a switching circuit to a controller and provide a way to send switching commands. Add your actual controller, communication method and implementation details here.",
+                technologies: [
+                    "Internet of Things",
+                    "Embedded Systems",
+                    "Microcontroller"
+                ],
+                learning:
+                    "Understanding the relationship between hardware, control logic and connected-device communication."
+            },
+
+            "blood-donor": {
+                title: "Blood Donor Management System",
+                category: "Web Development",
+                summary:
+                    "A web application designed to organize donor information and make blood donor discovery easier.",
+                overview:
+                    "The system aims to provide a structured way to manage blood donor details and help users find potential donors based on relevant information.",
+                problem:
+                    "Finding and organizing suitable donor information can be difficult when records are scattered or outdated.",
+                solution:
+                    "The application provides a centralized approach to donor records and searching. Describe the actual registration, search, authentication and database features implemented in your version here.",
+                technologies: [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Node.js",
+                    "Express",
+                    "MongoDB"
+                ],
+                learning:
+                    "Web application development, API integration and database-backed information management."
+            },
+
+            "multi-agent-research": {
+                title: "Multi-Agent Research Assistant",
+                category: "Artificial Intelligence",
+                summary:
+                    "An AI research assistant concept that uses specialized agents to help organize and carry out research tasks.",
+                overview:
+                    "The project explores a multi-agent workflow in which different agents can handle distinct stages of a research task, helping structure the process from information gathering to a consolidated result.",
+                problem:
+                    "Research can involve multiple repetitive stages, including collecting information, comparing findings and organizing conclusions.",
+                solution:
+                    "The system is intended to divide research tasks among specialized agents and combine their outputs. Add the actual agents, models, tools and workflow you have implemented.",
+                technologies: [
+                    "Python",
+                    "Artificial Intelligence",
+                    "LLMs",
+                    "Multi-Agent Systems"
+                ],
+                learning:
+                    "Agent-based workflows, task decomposition and coordinating outputs from AI components."
+            }
+        };
+
+        const projectId =
+            new URLSearchParams(window.location.search).get("id");
+
+        const project = projects[projectId];
+        const content = document.getElementById("project-content");
+
+        if (!project) {
+            content.innerHTML = `
+                <h1>Project not found</h1>
+                <p>Please return to the portfolio and select a project.</p>
+                <a class="back-button" href="index.html#projects">
+                    Back to Projects
+                </a>
+            `;
+        } else {
+            document.title = project.title + " | My Portfolio";
+
+            content.innerHTML = `
+                <p class="eyebrow">${project.category}</p>
+                <h1>${project.title}</h1>
+                <p class="summary">${project.summary}</p>
+
+                <section class="details-card">
+                    <h2>Project Overview</h2>
+                    <p>${project.overview}</p>
+                </section>
+
+                <section class="details-card">
+                    <h2>Problem Statement</h2>
+                    <p>${project.problem}</p>
+                </section>
+
+                <section class="details-card">
+                    <h2>Proposed Solution</h2>
+                    <p>${project.solution}</p>
+                </section>
+
+                <section class="details-card">
+                    <h2>Technologies</h2>
+                    <div class="tech-list">
+                        ${project.technologies.map(
+                            tech => `<span>${tech}</span>`
+                        ).join("")}
+                    </div>
+                </section>
+
+                <section class="details-card">
+                    <h2>Key Learning</h2>
+                    <p>${project.learning}</p>
+                </section>
+
+                <a class="back-button" href="index.html#projects">
+                    ← Back to Portfolio
+                </a>
+            `;
+        }
+    </script>
+</body>
+</html>

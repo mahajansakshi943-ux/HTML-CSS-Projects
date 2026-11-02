@@ -1,0 +1,237 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+}
+
+/* Green-yellow gradient background */
+.gradient-bg {
+    width: 750px;
+    min-height: 468px;
+    padding: 27px 33px 17px;
+    background: linear-gradient(
+        110deg,
+        #376b3f 0%,
+        #698b27 55%,
+        #98a900 100%
+    );
+}
+
+/* Main white card */
+.container {
+    width: 100%;
+    min-height: 425px;
+    display: flex;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 28px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* Left teal panel */
+.welcome-panel {
+    width: 47%;
+    flex-shrink: 0;
+    background: linear-gradient(140deg, #004d58, #004650);
+    color: white;
+    border-radius: 28px 150px 150px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-panel h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.welcome-panel p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 26px;
+}
+
+.sign-in {
+    width: 126px;
+    height: 34px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sign-in:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Right registration section */
+.register-panel {
+    flex: 1;
+    min-width: 0;
+    background: white;
+    padding: 45px 35px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.register-panel h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #050505;
+    margin-bottom: 18px;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #65929b;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #285b66;
+    font-size: 13px;
+}
+
+.social-icons a:hover {
+    background: #edf4f5;
+}
+
+/* OR heading */
+.register-panel h2 {
+    font-size: 27px;
+    margin-bottom: 3px;
+    color: #050505;
+}
+
+.subtitle {
+    font-size: 11px;
+    color: #333;
+    margin-bottom: 7px;
+    white-space: nowrap;
+}
+
+/* Form fields */
+.register-panel form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+.register-panel input {
+    width: 100%;
+    height: 33px;
+    padding: 0 13px;
+    border: none;
+    outline: none;
+    background: #cecece;
+    color: #333;
+    font-size: 12px;
+}
+
+.register-panel input::placeholder {
+    color: #777;
+}
+
+.register-panel input:focus {
+    box-shadow: 0 0 0 1px #a5ae00;
+}
+
+/* Sign up button */
+.sign-up {
+    width: 130px;
+    height: 34px;
+    margin-top: 2px;
+    border: none;
+    background: #b4bd00;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sign-up:hover {
+    background: #9da600;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+    body {
+        padding: 20px;
+    }
+
+    .gradient-bg {
+        width: 100%;
+        max-width: 750px;
+        padding: 18px;
+    }
+
+    .welcome-panel {
+        width: 45%;
+        border-radius: 25px 100px 100px 25px;
+    }
+
+    .register-panel {
+        padding: 35px 20px;
+    }
+
+    .welcome-panel h1,
+    .register-panel h1 {
+        font-size: 23px;
+    }
+
+    .subtitle {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 550px) {
+    .gradient-bg {
+        padding: 12px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .welcome-panel {
+        width: 100%;
+        min-height: 220px;
+        border-radius: 25px 25px 90px 90px;
+    }
+
+    .register-panel {
+        width: 100%;
+        padding: 30px 25px;
+    }
+}

@@ -1,0 +1,213 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    width: 90%;
+    max-width: 780px;
+    height: 458px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #152027;
+    border-top: 3px solid #49382d;
+    overflow: hidden;
+}
+
+.left-panel {
+    position: relative;
+    background: #0b1012;
+    color: white;
+    text-align: center;
+    padding: 38px 20px;
+    border-right: 1px solid #34424b;
+}
+
+.logo {
+    text-align: left;
+    font-size: 65px;
+    line-height: 1;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ffb13b, #ff0069, #a52bce);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.left-panel h2 {
+    margin-top: 25px;
+    font-size: 23px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.left-panel h2 span {
+    background: linear-gradient(90deg, #ff5a16, #ff0084);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.photo-stack {
+    height: 165px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    width: 75px;
+    height: 145px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    border: 3px solid #d8c8a6;
+}
+
+.photo-one {
+    background: #624a39;
+    transform: rotate(-12deg) translateX(18px);
+}
+
+.photo-two {
+    background: #b8a077;
+    transform: translateY(-5px);
+    z-index: 2;
+}
+
+.photo-three {
+    background: #324c42;
+    transform: rotate(12deg) translateX(-18px);
+}
+
+.app-store {
+    position: absolute;
+    bottom: 14px;
+    right: 0;
+    background: #202426;
+    color: #ddd;
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.right-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: #152027;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.login-form p {
+    color: #eee;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #354752;
+    border-radius: 12px;
+    background: transparent;
+    color: white;
+    font-size: 12px;
+    outline: none;
+}
+
+.login-form input::placeholder {
+    color: #a8b3bb;
+}
+
+.login-form input:focus {
+    border-color: #8a9ba7;
+}
+
+.login-button {
+    width: 100%;
+    height: 38px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 25px;
+    background: #214e8c;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.forgot {
+    display: block;
+    margin: 22px 0 52px;
+    text-align: center;
+    color: #eee;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.facebook-button,
+.create-button {
+    width: 100%;
+    height: 37px;
+    border-radius: 25px;
+    background: transparent;
+    color: #eee;
+    cursor: pointer;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.facebook-button {
+    border: 1px solid #354752;
+}
+
+.facebook-button span {
+    color: #1685f8;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.create-button {
+    border: 1px solid #2878c7;
+    color: #42a5ff;
+}
+
+@media (max-width: 650px) {
+    .login-container {
+        width: 95%;
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .left-panel {
+        min-height: 350px;
+        border-right: none;
+    }
+
+    .right-panel {
+        padding: 30px 25px;
+    }
+
+    .forgot {
+        margin-bottom: 30px;
+    }
+}
