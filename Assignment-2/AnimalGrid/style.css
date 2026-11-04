@@ -1,0 +1,188 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+/* Main collage */
+.collage {
+    width: 378px;
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    background-color: #d0ae00;
+}
+
+/* Animal images */
+.collage img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #d0ae00;
+}
+
+/* Top-left wolf */
+.wolf {
+    width: 145px;
+    height: 130px;
+    left: 19px;
+    top: 5px;
+    z-index: 2;
+}
+
+/* Top-right tiger */
+.tiger {
+    width: 145px;
+    height: 130px;
+    right: 7px;
+    top: 5px;
+    z-index: 2;
+}
+
+/* Center lion */
+.lion {
+    width: 155px;
+    height: 145px;
+    left: 111px;
+    top: 91px;
+    z-index: 4;
+}
+
+/* Bottom-left dog */
+.husky {
+    width: 150px;
+    height: 135px;
+    left: 19px;
+    bottom: 4px;
+    z-index: 3;
+}
+
+/* Bottom-right bear */
+.bear {
+    width: 150px;
+    height: 135px;
+    right: 7px;
+    bottom: 4px;
+    z-index: 3;
+}
+
+
+
+.scenery {
+    position: absolute;
+    width: 125px;
+    height: 110px;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Top corner */
+.scenery-top {
+    top: 25px;
+    left: 130px;
+    background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+    clip-path: polygon(0 20%, 100% 0, 75% 100%, 0 85%);
+}
+
+/* Left corner */
+.scenery-left {
+    top: 125px;
+    left: 20px;
+    background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b");
+    clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+}
+
+/* Right corner */
+.scenery-right {
+    top: 125px;
+    right: 15px;
+    background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e");
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+}
+
+/* Bottom corner */
+.scenery-bottom {
+    bottom: 10px;
+    left: 130px;
+    background-image: url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21");
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 80%);
+}
+
+
+/* Responsive layout */
+@media (max-width: 400px) {
+    .collage {
+        width: 95vw;
+        height: 80vw;
+    }
+
+    .wolf {
+        width: 38%;
+        height: 41%;
+        left: 3%;
+        top: 2%;
+    }
+
+    .tiger {
+        width: 38%;
+        height: 41%;
+        right: 2%;
+        top: 2%;
+    }
+
+    .lion {
+        width: 41%;
+        height: 45%;
+        left: 29%;
+        top: 28%;
+    }
+
+    .husky {
+        width: 40%;
+        height: 42%;
+        left: 3%;
+        bottom: 1%;
+    }
+
+    .bear {
+        width: 40%;
+        height: 42%;
+        right: 2%;
+        bottom: 1%;
+    }
+
+    .scenery {
+        width: 28%;
+        height: 30%;
+    }
+
+    .scenery-top {
+        top: 7%;
+        left: 36%;
+    }
+
+    .scenery-left {
+        top: 37%;
+        left: 9%;
+    }
+
+    .scenery-right {
+        top: 37%;
+        right: 8%;
+    }
+
+    .scenery-bottom {
+        bottom: 6%;
+        left: 36%;
+    }
+}

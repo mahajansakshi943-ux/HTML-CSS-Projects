@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.gallery {
+    position: relative;
+    width: 390px;
+    height: 390px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    padding: 8px;
+    background: white;
+}
+
+.card {
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 0 2px gray;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.card2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.card3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.card4 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.card5 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.card6 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.card7 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.card8 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.card9 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+
+.card {
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 0 2px gray;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    z-index: 10;
+    box-shadow: 0 4px 12px gray;
+    cursor: pointer;
+}
+
+/* Center image: normal size until hovered */
+.card2 {
+    position: relative;
+    z-index: 1;
+    transform: scale(1);
+    border: 4px solid white;
+}
+
+.card2:hover {
+    transform: scale(1.25);
+    z-index: 10;
+}
+
+/* Responsive design */
+@media (max-width: 450px) {
+    .gallery {
+        width: 95vw;
+        height: 95vw;
+        gap: 5px;
+    }
+}

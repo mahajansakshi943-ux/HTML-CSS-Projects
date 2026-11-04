@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    padding: 26px 3.3%;
+}
+
+/* Main navbar */
+
+.wisdom-navbar {
+    width: 100%;
+    min-height: 96px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    background-color: #d1e7e5;
+
+    /* Decorative background pattern */
+    background-image:
+        repeating-radial-gradient(
+            ellipse at 40% 150%,
+            transparent 0px,
+            transparent 28px,
+            rgba(255,255,255,0.28) 29px,
+            rgba(255,255,255,0.28) 31px,
+            transparent 32px,
+            transparent 48px
+        );
+
+    position: relative;
+}
+
+/* Brand logo */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #164f50;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.brand:hover {
+    transform: scale(1.04);
+}
+
+.brand-icon {
+    font-size: 27px;
+    color: #3f8175;
+}
+
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.brand-name span {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #22615e;
+    text-shadow: 1px 1px 0 #ffffff;
+}
+
+.brand-name small {
+    margin-top: 5px;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #285e5b;
+    white-space: nowrap;
+}
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex: 1;
+}
+
+.nav-links input[type="radio"] {
+    display: none;
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 9px;
+
+    font-size: 14px;
+    color: #3f4656;
+    white-space: nowrap;
+
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+/* Hover effect */
+
+.nav-item:hover {
+    color: #ff642d;
+    background: rgba(255,255,255,0.3);
+}
+
+/* Selected item */
+
+.nav-links input[type="radio"]:checked + .nav-item {
+    color: #ff642d;
+}
+
+/* Animated underline */
+
+.nav-item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    width: 0;
+    height: 2px;
+    background: #ff642d;
+    transform: translateX(-50%);
+    transition: width 0.25s ease;
+}
+
+.nav-links input[type="radio"]:checked + .nav-item::after {
+    width: 65%;
+}
+
+.nav-item:hover::after {
+    width: 65%;
+}
+
+/* Contact button */
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 23px;
+
+    background: #ff642d;
+    color: #ffffff;
+
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+
+    box-shadow: 0 2px 5px rgba(255,100,45,0.15);
+    transition: background 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.contact-btn:hover {
+    background: #e94d1c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(255,100,45,0.25);
+}
+
+/* Keyboard accessibility */
+
+.nav-item:focus-visible,
+.contact-btn:focus-visible,
+.brand:focus-visible {
+    outline: 2px solid #ff642d;
+    outline-offset: 3px;
+}
+
+/* Responsive design */
+
+@media (max-width: 1100px) {
+    body {
+        padding: 18px 2%;
+    }
+
+    .wisdom-navbar {
+        padding: 15px 18px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 0;
+    }
+
+    .nav-item {
+        padding: 10px 6px;
+        font-size: 12px;
+    }
+
+    .brand-name span {
+        font-size: 13px;
+    }
+
+    .contact-btn {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 760px) {
+    .wisdom-navbar {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        order: 3;
+        flex: 1 1 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-top: 8px;
+    }
+
+    .nav-item {
+        flex-shrink: 0;
+    }
+}
