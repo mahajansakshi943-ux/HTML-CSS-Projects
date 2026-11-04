@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Naturals | Taste the Original</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-strip">
+    *This is only a brand name and does not represent its true nature.
+</div>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="container header-inner">
+
+        <a class="brand" href="#home">
+            <span class="brand-mark">NATUR♥LS</span>
+            <small>TASTE THE ORIGINAL</small>
+        </a>
+
+        <a class="btn btn-naturals" href="#order">Order Now</a>
+
+        <form class="search-form" action="#products">
+            <input type="search" name="q" placeholder="I'm looking for..." aria-label="Search products">
+            <button type="submit">⌕</button>
+        </form>
+
+    </div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="site-nav">
+    <div class="container nav-links">
+
+        <a href="#tree">Tree To Treat</a>
+        <a href="#legacy">Our Legacy</a>
+
+        <div class="nav-dropdown">
+            <a href="#products">Products⌄</a>
+
+            <div class="dropdown-menu-custom">
+                <a href="#seasonal">Seasonal</a>
+                <a href="#products">Malai</a>
+                <a href="#products">Dry Fruit</a>
+                <a href="#products">Chocolate</a>
+            </div>
+        </div>
+
+        <a href="#ingredients">Malai Magic</a>
+        <a href="#franchise">Franchise Queries</a>
+        <a href="#footer">Store Locator</a>
+
+    </div>
+</nav>
+
+<main id="home">
+
+  
+    <section class="hero-slider">
+
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+
+    <div class="slides">
+
+        <!-- First Slide -->
+        <div class="slide slide-one">
+
+            <div class="slide-image">
+                <img src="https://images.unsplash.com/photo-1501446529957-6226bd447c46" alt="Ice Cream">
+            </div>
+
+            <div class="slide-content">
+                <h1>THE WAIT IS OVER.<br>
+                    SITAPHAL SEASON IS HERE.</h1>
+
+                <a href="#">DISCOVER THE SEASON</a>
+            </div>
+
+            <label for="slide2" class="arrow left">&#10094;</label>
+            <label for="slide2" class="arrow right">&#10095;</label>
+
+        </div>
+
+        <!-- Second Slide -->
+        <div class="slide slide-two">
+
+            <div class="slide-image">
+                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e" alt="Ice Cream">
+            </div>
+
+            <div class="slide-content">
+                <h1>THE TASTE OF SUMMER.<br>
+                    MANGO MAGIC IS HERE.</h1>
+
+                <a href="#">DISCOVER MORE</a>
+            </div>
+
+            <label for="slide1" class="arrow left">&#10094;</label>
+            <label for="slide1" class="arrow right">&#10095;</label>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- TREE TO TREAT -->
+    <section class="quote-section section-pad" id="tree">
+
+        <div class="container quote-card">
+
+            <h2>
+                "If I want to sell ice cream, I will invest in trees."
+            </h2>
+
+            <p>
+                — Late Shri Raghunandan Kamath, Founder, Naturals Ice Cream
+            </p>
+
+            <div class="video-poster">
+
+                <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=1600&q=85" alt="Ice cream story">
+
+                <a class="play-button" href="https://www.youtube.com/results?search_query=Naturals+Tree+To+Treat" target="_blank">
+                    ▶
+                </a>
+
+                <span class="video-caption">
+                    TREE<br>TO TREAT
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- STORY GRID -->
+    <section class="story-grid container-fluid">
+
+        <article class="story-tile">
+            <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=85" alt="Nature">
+
+            <h3>
+                TREES GIVE JOY.<br>
+                WE BRING IT TO YOU.
+            </h3>
+        </article>
+
+        <article class="story-tile">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85" alt="Forest">
+
+            <h3>
+                MADE ONLY<br>
+                IN SMALL BATCHES.
+            </h3>
+        </article>
+
+        <article class="story-tile">
+            <img src="https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=1000&q=85" alt="Fresh fruits">
+
+            <h3>
+                TREES GIVE IN<br>
+                ABUNDANCE. SO DO WE.
+            </h3>
+        </article>
+
+        <article class="story-tile">
+            <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?auto=format&fit=crop&w=1000&q=85" alt="Fresh apples">
+            <h3>
+                TREES GIVE FRUITS.<br>
+                WE DO THE REST.
+            </h3>
+        </article>
+
+    </section>
+
+    <!-- SEASONAL PRODUCTS -->
+    <section class="seasonal-section section-pad" id="seasonal">
+
+        <div class="container">
+
+            <h2 class="section-title">SEASONAL BEST</h2>
+
+            <div class="row g-4" id="products">
+
+                <div class="col-6 col-lg-3">
+                    <article class="product-card">
+
+                        <img src="https://images.unsplash.com/photo-1557142046-c704a3adf364?auto=format&fit=crop&w=700&q=85" alt="Seasonal fruit">
+                        <div class="product-info">
+                            <h3>MANGO ICE CREAM</h3>
+                            <p>Made with real mangoes</p>
+                            <a href="#order" class="btn btn-naturals">BUY</a>
+                        </div>
+
+                    </article>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <article class="product-card">
+
+                        <img src="https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=700&q=85" alt="Sitaphal ice cream">
+
+                        <div class="product-info">
+                            <h3>SITAPHAL ICE CREAM</h3>
+                            <p>A seasonal favourite</p>
+                            <a href="#order" class="btn btn-naturals">BUY</a>
+                        </div>
+
+                    </article>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <article class="product-card">
+
+                        <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=700&q=85" alt="Orange pistachio">
+
+                        <div class="product-info">
+                            <h3>ORANGE PISTACHIO</h3>
+                            <p>A citrusy, nutty scoop</p>
+                            <a href="#order" class="btn btn-naturals">BUY</a>
+                        </div>
+
+                    </article>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <article class="product-card">
+
+                        <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=700&q=85" alt="Kala jamun">
+
+                        <div class="product-info">
+                            <h3>KALA JAMUN</h3>
+                            <p>Rich fruit flavour</p>
+                            <a href="#order" class="btn btn-naturals">BUY</a>
+                        </div>
+
+                    </article>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#products" class="btn btn-outline-naturals">
+                    VIEW ALL FLAVOURS
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BRAND PANELS -->
+    <section class="brand-panels container">
+
+        <div class="brand-panel panel-sundae">
+            <span>JUST</span>
+            <strong>SUNDAES</strong>
+            <p>A little celebration in every cup</p>
+        </div>
+
+        <div class="brand-panel panel-now">
+            <strong>
+                NATURALS<br>
+                <b>NOW</b>
+            </strong>
+            <p>Discover more ways to enjoy</p>
+        </div>
+
+        <div class="brand-panel panel-bonda">
+            <strong>BONDA FACTORY</strong>
+            <p>by NATURALS</p>
+        </div>
+
+    </section>
+
+    <!-- INGREDIENT STORY -->
+    <section class="ingredients section-pad" id="ingredients">
+
+        <div class="container">
+
+            <h2 class="section-title">INGREDIENT STORY</h2>
+
+            <div class="row g-5">
+
+                <div class="col-md-4 ingredient">
+
+                    <div class="ingredient-icon">♧</div>
+
+                    <h3>1. MILK</h3>
+
+                    <p>
+                        The milk that goes into Naturals ice cream comes from trusted vendors.
+                        It makes every scoop rich, creamy and consistent.
+                    </p>
+
+                </div>
+
+                <div class="col-md-4 ingredient">
+
+                    <div class="ingredient-icon">◉</div>
+
+                    <h3>2. FRUITS</h3>
+
+                    <p>
+                        Fruit is in the DNA of Naturals Ice Cream.
+                        We source fresh fruits from their most popular locations.
+                    </p>
+
+                </div>
+
+                <div class="col-md-4 ingredient">
+
+                    <div class="ingredient-icon">♧</div>
+
+                    <h3>3. SUGAR</h3>
+
+                    <p>
+                        We use fine, carefully selected sugar,
+                        because only the best makes its way into our scoops.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FRANCHISE -->
+    <section class="franchise-banner container" id="franchise">
+
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=85" alt="Fruit harvest">
+        <div>
+            <h2>FRANCHISE QUERIES</h2>
+
+            <p>
+                Bring the joy of Naturals to your neighbourhood.
+            </p>
+
+            <a class="btn btn-light" href="mailto:franchise@naturalicecreams.in">
+                ENQUIRE NOW
+            </a>
+        </div>
+
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="instagram-section section-pad">
+
+        <div class="container-fluid">
+
+            <h2 class="section-title">
+                FOLLOW <span>@naturalicecream</span> ON INSTAGRAM
+            </h2>
+
+            <div class="insta-grid">
+
+                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=600&q=80" alt="Ice cream post">
+
+                <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=600&q=80" alt="Grapes">
+
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="Chocolate ice cream">
+
+                <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=600&q=80" alt="Ice cream scoop">
+
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Green landscape">
+
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="https://www.instagram.com/naturalicecream/" class="btn btn-naturals" target="_blank">
+                    Follow on Instagram
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LEGACY -->
+    <section class="legacy-section section-pad" id="legacy">
+
+        <div class="container legacy-card">
+
+            <h2>
+                From Humble Beginnings to Ice Cream Excellence:<br>
+                The Story of Naturals Ice Cream
+            </h2>
+
+            <p>
+                In the streets of Mumbai in 1984, a young visionary named
+                Raghunandan Srinivas Kamath began a journey that transformed
+                into an Indian ice cream favourite. Naturals became known for
+                handcrafted ice cream and fruit-based flavours such as Sitaphal,
+                Tender Coconut, Jackfruit, Muskmelon and Kala Jamun.
+            </p>
+
+            <a class="btn btn-naturals read-more" href="https://naturalicecreams.in/" target="_blank">
+                Read More
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ORDER SECTION -->
+    <section class="order-section" id="order">
+
+        <div class="container text-center">
+
+            <h2>HAPPINESS IS JUST A SCOOP AWAY</h2>
+
+            <p>Order your favourite Naturals ice cream today.</p>
+
+            <a class="btn btn-dark btn-lg" href="https://naturalicecreams.in/" target="_blank">
+                Order Now
+            </a>
+
+            <h3>Also available on</h3>
+
+            <div class="delivery-brands">
+                <span>◉ SWIGGY</span>
+                <span>zomato</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-4 footer-column">
+
+                <h4>CONTACT US</h4>
+
+                <p>
+                    Plot 55 ABCD &amp; 56 D, Kandivali Industrial Estate,
+                    <br>
+                    Charkop, Kandivali (W), Mumbai – 400 067.
+                </p>
+
+                <a href="mailto:customercare@naturalicecreams.in">
+                    ✉ customercare@naturalicecreams.in
+                </a>
+
+                <p class="mt-4">☎ 8080801984</p>
+
+            </div>
+
+            <div class="col-6 col-lg-3 footer-column">
+
+                <h4>ABOUT NATURALS</h4>
+
+                <a href="#tree">Tree To Treat</a>
+                <a href="#legacy">Our Legacy</a>
+                <a href="#franchise">Franchise Queries</a>
+
+                <h4 class="mt-4">FRANCHISE QUERIES</h4>
+
+                <a href="#franchise">Become a Business Partner</a>
+                <a href="#franchise">Franchise FAQ</a>
+
+            </div>
+
+            <div class="col-6 col-lg-2 footer-column">
+
+                <h4>OTHERS</h4>
+
+                <a href="#legacy">Artist Collaboration</a>
+                <a href="#footer">Store locator</a>
+                <a href="#tree">CSR</a>
+                <a href="#footer">Legal</a>
+                <a href="#products">Nutritional Info</a>
+                <a href="#footer">Careers</a>
+                <a href="#legacy">Blogs</a>
+
+            </div>
+
+            <div class="col-lg-3 footer-column">
+
+                <h4>SHOP</h4>
+
+                <a href="#seasonal">Seasonal</a>
+                <a href="#products">Malai</a>
+                <a href="#products">Dry Fruit</a>
+                <a href="#products">Special</a>
+                <a href="#products">Chocolate</a>
+                <a href="#products">No Added Sugar</a>
+
+            </div>
+
+        </div>
+
+        <div class="social-links">
+
+            <a href="https://wa.me/">◉</a>
+            <a href="https://www.instagram.com/naturalicecream/">◎</a>
+            <a href="#">f</a>
+            <a href="#">▶</a>
+            <a href="#">𝕏</a>
+            <a href="#">in</a>
+
+        </div>
+
+        <p class="copyright">
+            © Naturals Ice Cream. Student front-end practice clone.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
